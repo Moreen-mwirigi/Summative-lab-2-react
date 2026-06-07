@@ -23,15 +23,6 @@
       "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?",
       "category": "Accessories",
       "stock": "22"
-    },
-    {
-      "name": "Laptop",
-      "price": 200,
-      "image": "",
-      "category": "Accessories",
-      "stock": 5,
-      "id": "lUZupxcz5-4"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

@@ -22,7 +22,7 @@ export default function Products ({products =[], onUpdatePrice}){
     return(
         <div className="container py-5">
             <h2 className="mb-4 text-center"> Shop </h2>
-            <div className="row mb-4 g-3">
+            <div className="row mb-4 g-4">
                 <div className="col-md-8">
                 <input className="search" placeholder="Search products ..." value={search}
                 onChange={e => setSearch(e.target.value)}/>

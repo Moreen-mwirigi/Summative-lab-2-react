@@ -13,21 +13,25 @@ export default function ProductCard({product, onUpdatePrice}){
     return (
         <div className="card h-100 shadow-sm">
             <span className="category-badge">{product.category}</span>
-            <img src={product.image} className="card-img-top" alt ={product.name}/>
-            <h3>{product.name}</h3>
-            <p>Stock: {product.stock} units </p>
+            <img src={product.image} className="card-img-top" alt ={product.name}
+                style={{height: '220px', objectFit:'cover'}}
+            />"
+            <h3 className="card-title fw-bold">{product.name}</h3>
+            <p className="text-muted mb-2">Stock: {product.stock} units </p>
                 {editing ? (
                     <>
-                    <input type="number" step="0.01" value={price} onChange={e => setPrice(e.target.value)}/>
-                    <button onClick={savePrice}>Save</button>
+                    <input type="number" className="form-control" step="0.01" value={price ?? product.price} 
+                    onChange={e => setPrice(e.target.value)}/>
+                    <button className="btn btn-success btn-sm" onClick={savePrice}>Save</button>
                     </>
                 ) : (
                     <>
-                    <p className="price">Price: ${product.price}</p>
-                    <button onClick={() => setEditing(true)}>Edit Price</button>
+                    <p className="form-control">Price: ${product.price}</p>
+                    <button className="btn btn-outline-secondary btn-sm" onClick={() => setEditing(true)}>Edit Price</button>
                     </>
                 )
                 }
         </div>
+        
     )
 }

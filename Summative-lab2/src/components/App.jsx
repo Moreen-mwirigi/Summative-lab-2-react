@@ -30,13 +30,13 @@ function App() {
   }
 
   function handleUpdatedPrice(id, newPrice) {
-    fetch(`http://localhost:3001/products ${id}`, {
+    fetch(`http://localhost:3001/products ${String(id).trim()}`, {
       method: "PATCH",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({price: newPrice})
+      body: JSON.stringify({price: Number(newPrice)})
     })
     .then(res => res.json())
-    .then(updated => setProducts(products.map(p => p.id === id ? updated : p)))
+    .then(updated => {setProducts(products.map(p => p.id === updated.id ? updated : p))})
   }
 
   return (
