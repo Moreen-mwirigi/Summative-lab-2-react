@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Headphones",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?",
+      "category": "Audio",
+      "stock": "20"
+    },
+    {
+      "id": "2",
+      "name": "iPhone 15 Pro",
+      "price": 999,
+      "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?",
+      "category": "Mobile",
+      "stock": "7"
+    },
+    {
+      "id": "3",
+      "name": "Logitech MX Master 3",
+      "price": 99.99,
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?",
+      "category": "Accessories",
+      "stock": "22"
+    },
+    {
+      "name": "Laptop",
+      "price": 200,
+      "image": "",
+      "category": "Accessories",
+      "stock": 5,
+      "id": "lUZupxcz5-4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
